@@ -166,7 +166,7 @@ def CreteAccount():
     else:
         print("gmail",GmailOK,"password",PasswordOK,"Username",UsernameOk)
         #need to imporve later 
-        return "There is some mistake in your text"
+        return "作成はできていません。どこかに打ち間違いがございいます。"
 
 
 #logging in to the account
@@ -186,15 +186,15 @@ def loginAccount():
         if not GmailOK:
             if checkUserNameGmailPassword(UsernameOrGmail,Password):
                 print("checkGamilNamePassword",checkUserNameGmailPassword) #print
-                return "logged in with gmail"
+                return "メールを使ってログイン出来ました。"
     
     UsernameOk = UsernameAnalysis(Username=UsernameOrGmail,datalist=datalist)
     print("UsernameOk",UsernameOk) #print
     if not UsernameOk:
         if checkUserNameGmailPassword(UsernameOrGmail,Password):
             print("checkGamilNamePassword",checkUserNameGmailPassword) #print
-            return "logged in with username"
-    return "Not logged in "
+            return "ユーザー名を使ってログイン出来ました。"
+    return "ログインはまだできていません。 "
     
     
 
